@@ -17,6 +17,9 @@
 
 \usepackage[noto]{pxchfon}	%for use Noto fonts
 
+\usepackage{bxtexlogo}
+\bxtexlogoimport{TikZ}
+
 \tikzset{% tikz style set
   	pointtype triangle/.style={mark=triangle*,mark size=4pt},
   	every mark/.style={fill=white,solid},
@@ -100,9 +103,9 @@
 		GUIを持つものとして代表的なNgraphは開発が停止しており\footnote{Windows向けビルドの最終更新は2015年である}
 		CLI形式として代表的なgnuplotもあるが初学者には難解であり、本教材には向かない。
 
-		そこで、\TeX でグラフを生成できるPGFPlots\footnote{対してPGFPlotsは執筆時点で4日前に更新されている}を取り扱うこととする。
+		そこで、\LaTeX でグラフを生成できるPGFPlots\footnote{対してPGFPlotsは執筆時点で4日前に更新されている}を取り扱うこととする。
 		PGFPlotsは、gnuplotより簡単な構文で論文レベルの高品位なグラフを生成することが可能である。
-		また\TeX 構文上でグラフの描画命令を記述でき、ビルド毎にグラフが生成されるため、
+		また\LaTeX 構文上でグラフの描画命令を記述でき、ビルド毎にグラフが生成されるため、
 		他のソフトで一度PDF形式などに出力する煩雑な手間を省くことが可能であり、修正なども容易になる。
 		例として以下の図\ref{fig:XLXC}に
 		RL直列回路の誘導性リアクタンス及びRC直列回路の容量性リアクタンスをプロットしたグラフを示す。
@@ -134,12 +137,21 @@
 		このような実験データの管理方法も解説する。
 
     \subsection{回路図の生成}
-         
+        電気系学科では欠かせない回路図であるが、
+        レポートや論文に用いることができる高品位な回路図の生成は一般的なCADで生成することが難しい。
+        一般的な回路図CADであるKiCadを用いて生成したRL直列回路の回路図を図\ref{fig:kicad-circuit}に示す。
 
 		\begin{figure}[H]
 			\centering
 			\begin{tabular}{c}
 				\begin{minipage}{0.50\hsize}
+					\centering
+					\includegraphics[width=4cm]{circuit.pdf}
+					\caption{KiCadで生成した回路図}
+					\label{fig:kicad-circuit}
+                \end{minipage}
+                
+                \begin{minipage}{0.50\hsize}
 					\centering
 					\begin{circuitikz}[scale=1.5]
 						\draw (0,0)
@@ -147,23 +159,20 @@
 						\draw (0,2)
 						to[short] (2,2);
 						\draw (2,2)
-						to[R,l_=$R$,v^<=$e_R$] (2,1);
+						to[R,l_=$R$] (2,1);
 						\draw (2,1)
-						to[L,l_=$L$,v^<=$e_L$] (2,0);
+						to[L,l_=$L$] (2,0);
 						\draw (2,0)
 						to[short] (0,0);
 					\end{circuitikz}
-					\caption{CircuiTiKzで生成した回路図}
-					\label{fig:RL-circuit}
-				\end{minipage}
-
-				\begin{minipage}{0.50\hsize}
-					\centering
-					\includegraphics[width=4cm]{circuit.pdf}
-					\caption{KiCadで生成した回路図}
-					\label{fig:RC-circuit}
+					\caption{Circui{\TikZ}で生成した回路図}
+					\label{fig:circuitikz-circuit}
 				\end{minipage}
 			\end{tabular}
-		\end{figure}
+        \end{figure}
+        
+        そこで、\LaTeX で回路図を生成できるCircui{\TikZ}を取り扱うこととする。
+        図\ref{fig:circuitikz-circuit}にCircui{\TikZ}で生成したRL直列回路の回路図を示す。
+        \LaTeX 構文上で回路図を生成できるので、再度編集する際も容易である。
 
 \end{document}
