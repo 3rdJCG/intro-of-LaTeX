@@ -1,6 +1,7 @@
 \expandafter\ifx\csname ifdraft\endcsname\relax
     \input{../../settings.tex}
-    \begin{document}
+    \graphicspath{{./figure/}}
+\begin{document}
 \fi
 
 \chapter{環境構築と初期設定}
@@ -10,7 +11,7 @@
 
 	\section{\LaTeX を使うのに必要なもの}
 		まず、\LaTeX のソフトそのものが必要になりますが、\LaTeX は単体のソフトウェアではなく、多くの関連ソフトの集合体です。
-		それらを一つ一つ導入していくのは不可能に等しいので、
+		それらを一つ一つ導入していくのはとても手間がかかるので、
 		\LaTeX では関連するソフトをひとまとまりにした状態で配布するディストリビューションという形態がとられています。
 		現在配布されているディストリビューションにも数種類あるのですが、
 		現在最もポピュラーな\TeX Liveというディストリビューションを今回使用します。
@@ -28,11 +29,16 @@
 		これらのソフトウェアの導入手順を以下にて解説します。
 
 	\section{\TeX Liveの導入}
-		まず最初に\TeX Liveを導入します。以下のページよりネットワークインストーラをダウンロードします。	\\
-		\url{https://www.tug.org/texlive/acquire-netinstall.html}	\\
-		このページを開いて、\url{install-tl-windows.exe}をダウンロードします。
+        まず最初に\TeX Liveを導入します。
+        
+		\subsection{Windows}
+		    以下のページよりネットワークインストーラをダウンロードします。	\\
+		    \url{https://www.tug.org/texlive/acquire-netinstall.html}	\\
+            このページを開いて、\url{install-tl-windows.exe}をダウンロードします。
+            
+            インストールした\url{install-tl-windows.exe}を起動すると以下のようなウィンドウが表示されます。
 
 
-\expandafter\ifx\csname ifdraft\endcsname\relax
-    \end{document}
+		    \expandafter\ifx\csname ifdraft\endcsname\relax
+\end{document}
 \fi
