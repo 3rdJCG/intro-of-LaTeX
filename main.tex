@@ -4,63 +4,19 @@
 % |	Fonts	: NotoSansCJKjp				|
 % |			  NotoSerifCJKjp			|
 % ---------------------------------------
-\documentclass[uplatex,b5j]{jsbook}
 \input{settings.tex}
+
+\newcommand{\ifdraft}{false}
 
 \begin{document}
 
 \tableofcontents
 \clearpage
 
-\chapter{はじめに}
-	お手に取って頂きありがとうございます。
+% input introduction file
+\input{contents/introduction/introduction.tex}
 
-	みなさんは\LaTeX \footnote{ラテック/ラテフ、英語圏ではレイテックとも読まれる}というソフトウェアをご存知でしょうか？
-	\LaTeX とは\TeX \footnote{テック/テフと読む、テックスは誤り}を元に開発された文書作成ソフトウェアで、
-	編集している画面が出力として得られるMicrosoft Wordなどのソフトウェアとは対照的に
-	\LaTeX の文書はプログラミング言語のような形で命令と文章を記述し、
-	タイプセットと呼ばれるコンパイルを行うことでPDF形式での出力を得られる、という形の文書作成システムです。
-
-	このような形式は一見面倒に思えますが、自動で段落や目次の生成を行えたり、
-	強力な図形描画機能を備えている点から、レポートはもちろん論文の執筆で威力を発揮します。
-	また美しい文書を作成できることでも評価が高く、\LaTeX を用いた書籍も多数出版されています。
-	もちろん本書も\LaTeX で作成されています。
-
-	本書では、\LaTeX の基本的機能から、
-	レポート執筆に便利なグラフの生成や回路図の生成が可能になる拡張機能の使用法の解説、
-	またソースファイルの差分管理など運用面の内容も交えて解説します。
-
-	本書が読者のレポート執筆の一助となれば幸いです。
-
-\chapter{環境構築と初期設定}
-	\LaTeX を使うにあたり最も大きな障壁とされるのが環境構築\footnote{そのソフトを使える環境を整えること}と言われています。
-	確かにMicrosoft wordなどと比べれば導入は少々煩雑ではありますが、
-	多くの方々の尽力により今ではとても簡単になっているので、身構えることはありません。
-
-	\section{\LaTeX を使うのに必要なもの}
-		まず、\LaTeX のソフトそのものが必要になりますが、\LaTeX は単体のソフトウェアではなく、多くの関連ソフトの集合体です。
-		それらを一つ一つ導入していくのは不可能に等しいので、
-		\LaTeX では関連するソフトをひとまとまりにした状態で配布するディストリビューションという形態がとられています。
-		現在配布されているディストリビューションにも数種類あるのですが、
-		現在最もポピュラーな\TeX Liveというディストリビューションを今回使用します。
-
-		また\LaTeX は、マークアップ言語と呼ばれるプログラミング言語のような形で文章の構造を指定します。
-		そのため\LaTeX を使うためには\LaTeX 本体ソフトウェア以外にもマークアップ言語を記述するためのテキストエディタが必要になります。
-		\TeX Liveにも一応\TeX Worksというテキストエディタが同梱されているのですが、お世辞にもモダンとは言えません。
-		ですので、今現在\LaTeX に限らず多くのプログラミング言語の開発環境に用いられているVisual Studio Codeというエディタを使用します。
-
-		今回インストールするソフトウェアは以下の2つとなります。
-		\begin{description}
-			\item[\LaTeX ディストリビューション] \TeX Live
-			\item[テキストエディタ] Visual Studio Code 
-		\end{description}
-		これらのソフトウェアの導入手順を以下にて解説します。
-
-	\section{\TeX Liveの導入}
-		まず最初に\TeX Liveを導入します。以下のページよりネットワークインストーラをダウンロードします。	\\
-		\url{https://www.tug.org/texlive/acquire-netinstall.html}	\\
-		このページを開いて、\url{install-tl-windows.exe}をダウンロードします。
-
-		
+% input installation file
+\input{contents/installation/installation.tex}
 
 \end{document}
