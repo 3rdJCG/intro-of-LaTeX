@@ -23,25 +23,37 @@
 
 		今回インストールするソフトウェアは以下の2つとなります。
 		\begin{description}
-		    \item[\LaTeX ディストリビューション] \TeX Live
-		    \item[テキストエディタ] Visual Studio Code
+			\item[\LaTeX ディストリビューション] \TeX Live
+			\item[テキストエディタ] Visual Studio Code
 		\end{description}
 		これらのソフトウェアの導入手順を以下にて解説します。
 
 	\section{\TeX Liveの導入}
-        まず最初に\TeX Liveを導入します。
-        
-		\subsection{Windows}
-		    以下のページよりネットワークインストーラをダウンロードします。	\\
-		    \url{https://www.tug.org/texlive/acquire-netinstall.html}	\\
-            このページを開いて、\url{install-tl-windows.exe}をダウンロードします。
-            
-            インストールした\url{install-tl-windows.exe}を起動すると以下のようなウィンドウが表示されます。
-			\begin{figure}[H]
-				\centering
-                \includegraphics[width=5cm]{unpacker1.png}
-            \end{figure}
+		まず最初に\TeX Liveを導入します。
 
-		    \expandafter\ifx\csname ifdraft\endcsname\relax
+		\subsection{Windows}
+			以下のページよりネットワークインストーラをダウンロードします。	\\
+			\url{https://www.tug.org/texlive/acquire-netinstall.html}	\\
+			このページを開いて、\url{install-tl-windows.exe}をダウンロードします。
+
+			\begin{wrapfigure}{r}[0pt]{0.5\textwidth}
+				\centering
+				\includegraphics[width=5cm]{TeXlive-installer2.png}
+			\end{wrapfigure}
+			
+			ダウンロードしたファイルを起動すると展開用のソフトが起動するので、installを選択し次に進み、installボタンを押下します。
+			すると右のようなインストーラが起動します。
+			ここで様々なインストールの設定が行えますが、たいていの場合変更は必要ありません。
+			インストール先もここの設定で変更が可能ですが、本書では変更しないという前提で解説をします。
+			
+			インストールボタンを押下するとインストールが開始されます。
+			かなり時間がかかるので放置しておきます。
+
+			終わったらインストーラを閉じてインストールは完了です。
+
+		\subsection{Linux}
+			あああ
+
+			\expandafter\ifx\csname ifdraft\endcsname\relax
 \end{document}
 \fi
