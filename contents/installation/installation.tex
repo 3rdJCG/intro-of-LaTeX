@@ -6,7 +6,7 @@
 
 \chapter{環境構築と初期設定}
 	\LaTeX を使うにあたり最も大きな障壁とされるのが環境構築\footnote{そのソフトを使える環境を整えること}と言われています。
-	確かにMicrosoft wordなどと比べれば導入は少々煩雑ではありますが、
+	確かにMicrosoft Wordなどと比べれば導入は少々煩雑ではありますが、
 	多くの方々の尽力により今ではとても簡単になっているので、身構えることはありません。
 
 	\section{\LaTeX を使うのに必要なもの}
@@ -52,7 +52,20 @@
 			終わったらインストーラを閉じてインストールは完了です。
 
 		\subsection{Linux}
-			あああ
+			パッケージ管理ソフトを使用するのでまず最初に更新を行います。\\
+			apt(Debian,Ubuntuなど)では以下のように
+			\begin{mdframed}[linecolor=black,linewidth=0.5pt]
+				\begin{verbatim}
+					$ sudo apt update
+					$ sudo apt upgrade
+				\end{verbatim}
+			\end{mdframed}
+			pacman(Arch Linuxなど)では以下のようにします。
+			\begin{mdframed}[linecolor=black,linewidth=0.5pt]
+				\begin{verbatim}
+					$ pacman -Syu
+				\end{verbatim}
+			\end{mdframed}
 
 			\expandafter\ifx\csname ifdraft\endcsname\relax
 \end{document}
