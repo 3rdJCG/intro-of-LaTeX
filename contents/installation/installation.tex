@@ -40,33 +40,55 @@
 				\centering
 				\includegraphics[width=5cm]{TeXlive-installer2.png}
 			\end{wrapfigure}
-			
+
 			ダウンロードしたファイルを起動すると展開用のソフトが起動するので、installを選択し次に進み、installボタンを押下します。
 			すると右のようなインストーラが起動します。
 			ここで様々なインストールの設定が行えますが、たいていの場合変更は必要ありません。
 			インストール先もここの設定で変更が可能ですが、本書では変更しないという前提で解説をします。
-			
+
 			インストールボタンを押下するとインストールが開始されます。
 			かなり時間がかかるので放置しておきます。
 
 			終わったらインストーラを閉じてインストールは完了です。
 
 		\subsection{Linux}
-			パッケージ管理ソフトを使用するのでまず最初に更新を行います。\\
-			apt(Debian,Ubuntuなど)では以下のように
-			\begin{mdframed}[linecolor=black,linewidth=0.5pt]
-				\begin{verbatim}
+			\subsubsection{Debian,Ubuntuなど}
+				パッケージ管理ソフトを使用するのでまず最初に更新を行います。
+				以下のようにしてパッケージとリストを更新します。
+				\begin{mdframed}[linecolor=black,linewidth=0.5pt]
+					\begin{verbatim}
 					$ sudo apt update
 					$ sudo apt upgrade
-				\end{verbatim}
-			\end{mdframed}
-			pacman(Arch Linuxなど)では以下のようにします。
-			\begin{mdframed}[linecolor=black,linewidth=0.5pt]
-				\begin{verbatim}
-					$ sudo pacman -Syu
-				\end{verbatim}
-			\end{mdframed}
+					\end{verbatim}
+				\end{mdframed}
+				更新したら、以下のようにしてTeX Liveと関連ソフトウェアをインストールします。
+				\begin{mdframed}[linecolor=black,linewidth=0.5pt]
+					\begin{verbatim}
+					$ sudo apt install texlive-lang-japanese ghostscript perl
+					$ sudo apt install evince poppler-utils poppler-data
+					$ sudo apt install texlive-fonts-recommended texlive-fonts-extra
+					\end{verbatim}
+				\end{mdframed}
+				以上で完了です。
 
-			\expandafter\ifx\csname ifdraft\endcsname\relax
+			\subsubsection{Arch Linuxなど}
+				Ubuntuなどと同様にパッケージリストを更新します。
+				\begin{mdframed}[linecolor=black,linewidth=0.5pt]
+					\begin{verbatim}
+					$ sudo pacman -Syu
+					\end{verbatim}
+				\end{mdframed}
+				更新したら、同様に以下のようにしてTeX Liveと関連ソフトウェアをインストールします。
+				\begin{mdframed}[linecolor=black,linewidth=0.5pt]
+					\begin{verbatim}
+					$ sudo pacman -S texlive-langjapanese texlive-most
+					$ sudo pacman -S ghostscript perl
+					$ sudo pacman -S evince poppler-utils poppler-data
+					\end{verbatim}
+				\end{mdframed}
+				以上で完了です。
+
+
+				\expandafter\ifx\csname ifdraft\endcsname\relax
 \end{document}
 \fi
