@@ -274,3 +274,6 @@ TSWLatexianTemp*
 
 # draft pdfs
 /contents/**/*.pdf
+
+# Lua scripts
+*.lua
