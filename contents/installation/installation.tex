@@ -55,14 +55,14 @@
 			\subsubsection{Debian,Ubuntuなど}
 				パッケージ管理ソフトを使用するのでまず最初に更新を行います。
 				以下のようにしてパッケージとリストを更新します。
-				\begin{mdframed}[linecolor=black,linewidth=0.5pt]
+				\begin{mdframed}[style=bash]
 					\begin{verbatim}
 					$ sudo apt update
 					$ sudo apt upgrade
 					\end{verbatim}
 				\end{mdframed}
 				更新したら、以下のようにしてTeX Liveと関連ソフトウェアをインストールします。
-				\begin{mdframed}[linecolor=black,linewidth=0.5pt]
+				\begin{mdframed}[style=bash]
 					\begin{verbatim}
 					$ sudo apt install texlive-lang-japanese ghostscript perl
 					$ sudo apt install evince poppler-utils poppler-data
@@ -73,13 +73,13 @@
 
 			\subsubsection{Arch Linuxなど}
 				Ubuntuなどと同様にパッケージリストを更新します。
-				\begin{mdframed}[linecolor=black,linewidth=0.5pt]
+				\begin{mdframed}[style=bash]
 					\begin{verbatim}
 					$ sudo pacman -Syu
 					\end{verbatim}
 				\end{mdframed}
 				更新したら、同様に以下のようにしてTeX Liveと関連ソフトウェアをインストールします。
-				\begin{mdframed}[linecolor=black,linewidth=0.5pt]
+				\begin{mdframed}[style=bash]
 					\begin{verbatim}
 					$ sudo pacman -S texlive-langjapanese texlive-most
 					$ sudo pacman -S ghostscript perl
@@ -87,7 +87,26 @@
 					\end{verbatim}
 				\end{mdframed}
 				以上で完了です。
+		
+		\section{VSCodeの導入}
+			次にMicrosoft Visual Studio Code(以後VSCodeと省略)を導入します。
 
+			\subsection{Windows}
+				以下のページよりインストーラをダウンロードします。
+				\begin{mdframed}[style=shadow]
+					\url{https://code.visualstudio.com/}
+				\end{mdframed}
+				インストーラを起動して、指示にしたがってインストールを進めます。
+				以下のようなチェックボックスのある画面が出たら、
+				\begin{itemize}
+					\item ファイルコンテキストメニューに[Codeで開く]アクションを追加
+					\item ディレクトリコンテキストメニューに[Codeで開く]アクションを追加
+					\item PATHへの追加
+				\end{itemize}
+				のチェックボックスにチェックを入れて次へを押下します。
+				その後は指示にしたがってインストールを進めたら完了です。
+				
+				
 
 				\expandafter\ifx\csname ifdraft\endcsname\relax
 \end{document}

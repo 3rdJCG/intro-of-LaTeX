@@ -10,15 +10,22 @@
 \usepackage[RPvoltages,americanresistors,americaninductors,europeanvoltage,americancurrents]{circuitikz}
 \usepackage[noto]{pxchfon}	%for use Noto fonts
 
+% To out put TikZ logo
 \usepackage{bxtexlogo}
 \bxtexlogoimport{TikZ}
 
 \usepackage{wrapfig}
-\usepackage[xcolor,framemethod=tikz]{mdframed}
 \usepackage[top=2cm, bottom=2cm, left=1.7cm, right=3cm]{geometry}
 
-% \usepackage{fancyhdr}
-% \pagestyle{fancy}
+% framed settings
+\usepackage{framed}
+\definecolor{shadecolor}{gray}{0.80}
+
+% mdframed settings
+\usepackage[xcolor,framemethod=tikz]{mdframed}
+\usetikzlibrary{shadows}
+\mdfdefinestyle{bash}{linecolor=black,linewidth=0.5pt}
+\mdfdefinestyle{shadow}{linewidth=0pt,backgroundcolor=black!15}
 
 \usepackage{uri}
 
