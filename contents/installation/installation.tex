@@ -32,8 +32,10 @@
 		まず最初に\TeX Liveを導入します。
 
 		\subsection{Windows}
-			以下のページよりネットワークインストーラをダウンロードします。	\\
-			\url{https://www.tug.org/texlive/acquire-netinstall.html}	\\
+			以下のページよりネットワークインストーラをダウンロードします。
+			\begin{mdframed}[style=shadow]
+				\url{https://www.tug.org/texlive/acquire-netinstall.html}
+			\end{mdframed}
 			このページを開いて、\url{install-tl-windows.exe}をダウンロードします。
 
 			\begin{wrapfigure}{r}[0pt]{0.5\textwidth}
@@ -87,26 +89,54 @@
 					\end{verbatim}
 				\end{mdframed}
 				以上で完了です。
-		
-		\section{VSCodeの導入}
-			次にMicrosoft Visual Studio Code(以後VSCodeと省略)を導入します。
 
-			\subsection{Windows}
-				以下のページよりインストーラをダウンロードします。
+	\section{VSCodeの導入}
+		次にMicrosoft Visual Studio Code(以後VSCodeと省略)を導入します。
+
+		\subsection{Windows}
+			以下のページよりインストーラをダウンロードします。
+			\begin{mdframed}[style=shadow]
+				\url{https://code.visualstudio.com/}
+			\end{mdframed}
+			インストーラを起動して、指示にしたがってインストールを進めます。
+
+			以下のようなチェックボックスのある画面が出たら、
+			\begin{itemize}
+				\item ファイルコンテキストメニューに[Codeで開く]アクションを追加
+				\item ディレクトリコンテキストメニューに[Codeで開く]アクションを追加
+				\item PATHへの追加
+			\end{itemize}
+			のチェックボックスにチェックを入れて次へを押下します。
+			その後は指示にしたがってインストールを進めたら完了です。
+
+		\subsection{Linux}
+			\subsubsection{Debian,Ubuntuなど}
+				以下のページより.deb形式のファイルをダウンロードします。
+				\footnote{コマンドラインのみでのインストールも可能ですがここでは省略します。
+						\\詳細は\url{https://code.visualstudio.com/docs/setup/linux}を参照してください。}
 				\begin{mdframed}[style=shadow]
 					\url{https://code.visualstudio.com/}
 				\end{mdframed}
-				インストーラを起動して、指示にしたがってインストールを進めます。
-				以下のようなチェックボックスのある画面が出たら、
-				\begin{itemize}
-					\item ファイルコンテキストメニューに[Codeで開く]アクションを追加
-					\item ディレクトリコンテキストメニューに[Codeで開く]アクションを追加
-					\item PATHへの追加
-				\end{itemize}
-				のチェックボックスにチェックを入れて次へを押下します。
-				その後は指示にしたがってインストールを進めたら完了です。
-				
-				
+				以下のコマンドを実行してダウンロードした.deb形式のファイルからインストールします。
+				ファイルパスはダウンロードしたファイル名に適宜変更します。
+				\begin{mdframed}[style=bash]
+					\begin{verbatim}
+					$ sudo apt install ./<file>.deb
+					\end{verbatim}
+				\end{mdframed}
+				以上で完了です。
+
+			\subsubsection{Arch Linuxなど}
+				以下のコマンドを実行してパッケージ管理ソフト経由でインストールします。
+				\footnote{このリポジトリはOSS版であり、Microsoft公式のリポジトリではないようです。
+						\\使用に関して全く問題はありませんが、公式のリポジトリからインストールする場合は
+						\\\url{https://code.visualstudio.com/docs/setup/linux}を参照してください。}
+				\begin{mdframed}[style=bash]
+					\begin{verbatim}
+					$ sudo pacman -S code
+					\end{verbatim}
+				\end{mdframed}
+				以上で完了です。
 
 				\expandafter\ifx\csname ifdraft\endcsname\relax
 \end{document}
