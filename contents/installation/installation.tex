@@ -117,7 +117,7 @@
 			\subsubsection{Debian,Ubuntuなど}
 				以下のページより.deb形式のファイルをダウンロードします。
 				\footnote{コマンドラインのみでのインストールも可能ですがここでは省略します。
-						\\詳細は\url{https://code.visualstudio.com/docs/setup/linux}を参照してください。}
+					\\詳細は\url{https://code.visualstudio.com/docs/setup/linux}を参照してください。}
 				\begin{mdframed}[style=shadow]
 					\url{https://code.visualstudio.com/}
 				\end{mdframed}
@@ -133,8 +133,8 @@
 			\subsubsection{Arch Linuxなど}
 				以下のコマンドを実行してパッケージ管理ソフト経由でインストールします。
 				\footnote{このリポジトリはOSS版であり、Microsoft公式のリポジトリではないようです。
-						\\使用に関して全く問題はありませんが、公式のリポジトリからインストールする場合は
-						\\\url{https://code.visualstudio.com/docs/setup/linux}を参照してください。}
+					\\使用に関して全く問題はありませんが、公式のリポジトリからインストールする場合は
+					\\\url{https://code.visualstudio.com/docs/setup/linux}を参照してください。}
 				\begin{mdframed}[style=bash]
 					\begin{verbatim}
 					$ sudo pacman -S code
@@ -143,19 +143,30 @@
 				以上で完了です。
 
 	\section{VSCodeの設定}
-		前項でVSCodeのインストールを行いましたが、インストールしたままの状態だと\LaTeX の執筆があまりしやすいとは言えません。
-		そのため本項では、\LaTeX の執筆がしやすいようにVSCodeの設定を変更していきます。
+		\subsection{日本語環境のセットアップ}
+			前項でVSCodeのインストールを行いましたが、インストールしたままの状態だと\LaTeX の執筆があまりしやすいとは言えません。
+			そのため本項では、\LaTeX の執筆がしやすいようにVSCodeの設定を変更していきます。
 
-		まず\LaTeX の執筆を支援する拡張機能であるLaTeX Workshopをインストールします。
-		VSCodeを起動し、キーボードで~
-		\tikzmarkin[]{1}(0.1,0.4)(-0.1,-0.15)Ctrl\tikzmarkend{1}~+
-		\tikzmarkin[]{2}(0.1,0.4)(-0.1,-0.15)Shift\tikzmarkend{2}~+
-		\tikzmarkin[]{3}(0.1,0.4)(-0.1,-0.15)X\tikzmarkend{3}
-		を押下します。
+			インストールしたままの状態では言語環境が英語なので、日本語の環境に設定します。
+			VSCodeを起動し、キーボードで~
+			\tikzmarkin[]{1}(0.1,0.4)(-0.1,-0.15)Ctrl\tikzmarkend{1}~+
+			\tikzmarkin[]{2}(0.1,0.4)(-0.1,-0.15)Shift\tikzmarkend{2}~+
+			\tikzmarkin[]{3}(0.1,0.4)(-0.1,-0.15)X\tikzmarkend{3}
+			を押下します。
+			拡張機能のタブが開かれるので、検索バーにJapanと入力します。
+			すると候補にJapanese Language Pack for Visual Studio Codeが表示されるので、インストールのボタンを押下します。
+			インストールが完了すると図　のようにリロードを要求されるのでリロードを行って導入は完了です。
 
-		拡張機能のタブが開かれるので、検索バーにLaTeXと入力します。
-		候補の中からLaTeX Workshopを選択し、インストールを押下します。
+		\subsection{LaTeX Workshopの導入}
+			次に\LaTeX の執筆を支援する拡張機能であるLaTeX Workshopをインストールします。
+			先ほどと同様に~
+			\tikzmarkin[]{4}(0.1,0.4)(-0.1,-0.15)Ctrl\tikzmarkend{4}~+
+			\tikzmarkin[]{5}(0.1,0.4)(-0.1,-0.15)Shift\tikzmarkend{5}~+
+			\tikzmarkin[]{6}(0.1,0.4)(-0.1,-0.15)X\tikzmarkend{6}
+			を押下し拡張機能のタブを開き、検索バーにLaTeXと入力します。
+			候補の中からLaTeX Workshopを選択し、インストールを押下します。
+			しばらくするとインストールが終わった旨の表示がされ、完了となります。
 
-\expandafter\ifx\csname ifdraft\endcsname\relax
+			\expandafter\ifx\csname ifdraft\endcsname\relax
 \end{document}
 \fi
