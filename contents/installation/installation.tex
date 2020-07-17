@@ -183,6 +183,10 @@
 			\begin{wrapfigure}{r}[0pt]{0.5\textwidth}
 				\centering
 				\includegraphics[width=60mm,trim=0 30 50 0,clip]{VSCode-setting-dialog.png}
+
+				\vspace{5mm}
+				
+				\includegraphics[width=60mm]{VSCode-setting-json.png}
 			\end{wrapfigure}
 			執筆に当たり必要な拡張機能は入れ終わったので、設定をしていきます。
 			まず、
@@ -190,7 +194,12 @@
 			\tikzmarkin[]{8}(0.1,0.4)(-0.1,-0.15)Shift\tikzmarkend{8}~+
 			\tikzmarkin[]{9}(0.1,0.4)(-0.1,-0.15)P\tikzmarkend{9}
 			を押下して、Settingsと入力し、候補に出てきた『基本設定: 設定(JSON)を開く』を選択して開きます。
-			
+			すると図のように\url{"settings.json"}が開かれることを確認します。
+			次に、以下のページから設定ファイルをコピーします。
+			\begin{mdframed}[style=shadow]
+				\url{https://gist.github.com/}
+			\end{mdframed}
+			コピーした設定ファイルを先ほど開いた\url{"settings.json"}に貼り付けます。
 
 			\expandafter\ifx\csname ifdraft\endcsname\relax
 \end{document}
