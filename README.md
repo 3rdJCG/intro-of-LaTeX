@@ -1,4 +1,4 @@
-# 学生のためのLaTeX入門 ![Build main PDF](https://github.com/3rdJCG/intro-of-LaTeX/workflows/Build%20main%20PDF/badge.svg)
+# 学生のためのLaTeX入門 [![GitHub Actions Status](https://github.com/3rdJCG/intro-of-LaTeX/workflows/Build%20main%20PDF/badge.svg)](https://github.com/3rdJCG/intro-of-LaTeX/actions)
 高専低学年向けのLaTeX教材を製作するプロジェクト
 
 ## 概要
