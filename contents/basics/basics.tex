@@ -14,8 +14,30 @@
     本章では、構築した環境を利用して\LaTeX の基本的な機能を使った文書を作っていきます。
 
     \section{\LaTeX 文書の基本構成}
-        \LaTeX 文書は、基本的にその文書の設定について記述するプリアンブルと、
-        文書そのものを記述する本文の2つで構成されます。
+        まず、基本的な\LaTeX 文書の構成について解説します。
+        \LaTeX 文書の基本的な例を以下に示します。
+        
+        \begin{minted}[linenos,fontsize=\small]{tex}
+\documentclass[uplatex,dvipdfmx]{jsarticle}
+
+\title{テスト文書}
+\author{わたし}
+\date{\today}
+
+\begin{document}
+    \maketitle
+
+    \section{セクション}
+        セクションです。
+
+        \subsection{サブセクション}
+            サブセクションです。
+
+\end{document}
+        \end{minted}
+
+        % \LaTeX 文書は、基本的にその文書の設定について記述するプリアンブルと、
+        % 文書そのものを記述する本文の2つで構成されます。
 
 			\expandafter\ifx\csname ifdraft\endcsname\relax
 \end{document}
