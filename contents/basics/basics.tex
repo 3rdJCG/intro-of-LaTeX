@@ -8,7 +8,7 @@
 \begin{document}
 \fi
 
-\chapter{\LaTeX の基本文法}
+\chapter{\logoLaTeX の基本文法}
     前章で\LaTeX の環境構築と初期設定が終わりました。
     少々長かったですが、これで\LaTeX を使用する準備は万端です。
     本章では、構築した環境を利用して\LaTeX の基本的な機能を使った文書を作っていきます。
@@ -17,7 +17,7 @@
         まず、基本的な\LaTeX 文書の構成について解説します。
         \LaTeX 文書の基本的な例を以下に示します。
         
-        \begin{minted}[linenos,fontsize=\small]{tex}
+        \begin{minted}[linenos,fontsize=\small,highlightlines={7-16}]{tex}
 \documentclass[uplatex,dvipdfmx]{jsarticle}
 
 \title{テスト文書}
@@ -39,6 +39,6 @@
         % \LaTeX 文書は、基本的にその文書の設定について記述するプリアンブルと、
         % 文書そのものを記述する本文の2つで構成されます。
 
-			\expandafter\ifx\csname ifdraft\endcsname\relax
+            \expandafter\ifx\csname ifdraft\endcsname\relax
 \end{document}
 \fi
