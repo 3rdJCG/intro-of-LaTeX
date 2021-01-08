@@ -13,11 +13,10 @@
     少々長かったですが、これで\LaTeX を使用する準備は万端です。
     本章では、構築した環境を利用して\LaTeX の基本的な機能を使った文書を作っていきます。
 
-    \section{\LaTeX 文書の基本構成}
+    \section{\LaTeX 文書の基本}
         まず、基本的な\LaTeX 文書の構成について解説します。
         \LaTeX 文書の基本的な例を以下に示します。
-        
-        \begin{minted}[linenos,fontsize=\small,highlightlines={7-16}]{tex}
+        \begin{minted}[linenos,fontsize=\small,highlightlines={1-6}]{tex}
 \documentclass[uplatex,dvipdfmx]{jsarticle}
 
 \title{テスト文書}
@@ -35,9 +34,47 @@
 
 \end{document}
         \end{minted}
+        \LaTeX の構文では、大きく分けて2種類の記述があります。
+        1行目や3行目のように\mintinline{tex}{\}で始まるコマンドという記述と、
+        11行目や14行目のように\mintinline{tex}{\}で始まらない文章があります。
+        文章は書いた内容がそのまま出力させる指示になりますが、
+        コマンドの場合は\LaTeX ソフトウェアに特殊な指示を与えます。
 
-        % \LaTeX 文書は、基本的にその文書の設定について記述するプリアンブルと、
-        % 文書そのものを記述する本文の2つで構成されます。
+        また\LaTeX 文書は、その文書の設定について記述するプリアンブルと、
+        文書そのものを記述する本文の2つで構成されます。
+        たとえばこの文書では、ハイライトされている1行目から6行目がプリアンブルにあたります。
+        プリアンブルでは通常の文章は記述できません。
+        ハイライトされていない\mintinline{tex}{\begin{document}}で始まり
+        \mintinline{tex}{\end{document}}で終わる部分が本文にあたります。
+
+        \subsection{プリアンブルの内容}
+            \mintinline{tex}{\documentclass}ではその文書のタイプセット手順、
+            言語設定やレイアウトなどについて設定します。
+            今回の場合日本語環境で最も使われる\LaTeX エンジンのuplatexを使用するよう指定し、
+            後処理にdvipdfmxというソフトを使用するように指定しています。
+            また文書のレイアウトを日本語環境レポート向けのjsarticleに指定しています。
+            このコマンドは\LaTeX 文書において必ず記述する必要があります。
+
+            \mintinline{tex}{\title}では文書のタイトルを、
+            \mintinline{tex}{\author}では文書の作成者を、
+            \mintinline{tex}{\date}では文書の作成日など、
+            ここではタイトルに記述する内容について設定しています。
+            しかし、タイトルの出力自体はこの記述ではされません。
+            本文中の\mintinline{tex}{\maketitle}を記述することによってタイトルが出力されます。
+
+        \subsection{本文の内容}
+            \mintinline{tex}{\maketitle}ではプリアンブルで設定したタイトル・作成者・作成日を出力します。
+            \mintinline{tex}{\maketitle}を記述しないとタイトルが作成されず、いきなり本文から始めることができます。
+            
+            \mintinline{tex}{\section}では文書の節を出力します。
+            このコマンドは記述した箇所から次に\mintinline{tex}{\section}
+            が記述されるまでの文章がその節の区間となります。
+            つまりこの文書では10行目から12行目までに記述された内容が第1節となります。
+
+            \mintinline{tex}{\subsection}では文書の小節を出力します。
+            \mintinline{tex}{\section}より1つレベルが低くなり、
+            第1節の範囲内で\mintinline{tex}{\subsection}を使用すると第1.1節といったように出力されます。
+            同様のコマンドに\mintinline{tex}{\subsubsection}なども存在します。
 
             \expandafter\ifx\csname ifdraft\endcsname\relax
 \end{document}
